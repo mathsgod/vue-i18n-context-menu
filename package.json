@@ -2,7 +2,7 @@
   "name": "vue-i18-context-menu",
   "displayName": "vue-i18-context-menu",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "mathsgod",
   "author": {
     "name": "Raymond Chong",
@@ -38,12 +38,11 @@
       {
         "command": "vue-i18-context-menu.t",
         "title": "Convert to i18n"
-      },{
+      },
+      {
         "command": "vue-i18-context-menu.paste",
         "title": "Paste json i18n"
       }
-
-      
     ]
   },
   "scripts": {

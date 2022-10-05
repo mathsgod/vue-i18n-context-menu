@@ -1,6 +1,6 @@
 {
-  "name": "vue-i18-context-menu",
-  "displayName": "vue-i18-context-menu",
+  "name": "vue-i18n-context-menu",
+  "displayName": "vue-i18n-context-menu",
   "description": "",
   "version": "0.2.0",
   "publisher": "mathsgod",
@@ -15,8 +15,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vue-i18-context-menu.t",
-    "onCommand:vue-i18-context-menu.paste"
+    "onCommand:vue-i18n-context-menu.t",
+    "onCommand:vue-i18n-context-menu.t_with_input",
+    "onCommand:vue-i18n-context-menu.paste"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -24,23 +25,32 @@
       "editor/context": [
         {
           "group": "1_modification",
-          "command": "vue-i18-context-menu.t",
+          "command": "vue-i18n-context-menu.t",
           "when": "editorTextFocus && resourceLangId == vue"
         },
         {
           "group": "1_modification",
-          "command": "vue-i18-context-menu.paste",
+          "command": "vue-i18n-context-menu.t_with_input",
+          "when": "editorTextFocus && resourceLangId == vue"
+        },
+        {
+          "group": "1_modification",
+          "command": "vue-i18n-context-menu.paste",
           "when": "editorTextFocus"
         }
       ]
     },
     "commands": [
       {
-        "command": "vue-i18-context-menu.t",
-        "title": "Convert to i18n"
+        "command": "vue-i18n-context-menu.t",
+        "title": "Convert to {{$t('key')}}"
       },
       {
-        "command": "vue-i18-context-menu.paste",
+        "command": "vue-i18n-context-menu.t_with_input",
+        "title": "Convert to {{$t('input')}}"
+      },
+      {
+        "command": "vue-i18n-context-menu.paste",
         "title": "Paste json i18n"
       }
     ]

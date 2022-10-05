@@ -8,6 +8,7 @@
     "name": "Raymond Chong",
     "email": "mathsgod@yahoo.com"
   },
+  "repository": "https://github.com/mathsgod/vue-i18n-context-menu",
   "engines": {
     "vscode": "^1.71.0"
   },

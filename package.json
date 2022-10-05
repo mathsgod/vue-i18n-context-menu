@@ -15,8 +15,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vue-i18-context-menu.helloWorld",
-    "onCommand:vue-i18-context-menu.t"
+    "onCommand:vue-i18-context-menu.t",
+    "onCommand:vue-i18-context-menu.paste"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -26,6 +26,11 @@
           "group": "1_modification",
           "command": "vue-i18-context-menu.t",
           "when": "editorTextFocus && resourceLangId == vue"
+        },
+        {
+          "group": "1_modification",
+          "command": "vue-i18-context-menu.paste",
+          "when": "editorTextFocus"
         }
       ]
     },
@@ -33,7 +38,12 @@
       {
         "command": "vue-i18-context-menu.t",
         "title": "Convert to i18n"
+      },{
+        "command": "vue-i18-context-menu.paste",
+        "title": "Paste json i18n"
       }
+
+      
     ]
   },
   "scripts": {

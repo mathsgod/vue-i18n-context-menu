@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
 		newText = newText.replace(/\s+/g, " ");
 		//trim
 		newText = newText.trim();
-		newText = `$t('${newText}')`;
+		newText = `{{$t('${newText}')}}`;
 		edit.replace(selection, newText);
 	});
 
